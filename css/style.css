@@ -44,8 +44,14 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:22px;paddi
   align-items:center;
   overflow:hidden;
   background:
-    linear-gradient(90deg,rgba(6,26,47,.92) 0%,rgba(6,26,47,.78) 38%,rgba(6,26,47,.28) 68%,rgba(6,26,47,.06) 100%),
-    url("../images/hero-carpet-cleaning.webp.png") center right/cover no-repeat;
+    linear-gradient(
+      90deg,
+      rgba(6,26,47,.92) 0%,
+      rgba(6,26,47,.78) 38%,
+      rgba(6,26,47,.28) 68%,
+      rgba(6,26,47,.06) 100%
+    ),
+    url("../images/hero-carpet-cleaning.png") center right/cover no-repeat;
 }
 
 .hero::after{
