@@ -43,7 +43,7 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:22px;paddi
   display:flex;
   align-items:center;
   overflow:hidden;
-  background:
+  background-image:
     linear-gradient(
       90deg,
       rgba(6,26,47,.92) 0%,
@@ -51,7 +51,22 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:22px;paddi
       rgba(6,26,47,.28) 68%,
       rgba(6,26,47,.06) 100%
     ),
-    url("../images/hero-carpet-cleaning.png") center right/cover no-repeat;
+    url("../images/hero-carpet-cleaning.png");
+  background-position:center right, center right;
+  background-size:cover, 105%;
+  background-repeat:no-repeat, no-repeat;
+  animation:heroFloat 16s ease-in-out infinite alternate;
+}
+
+@keyframes heroFloat{
+  0%{
+    background-position:center right, center right;
+    background-size:cover, 105%;
+  }
+  100%{
+    background-position:center right, 58% center;
+    background-size:cover, 110%;
+  }
 }
 
 .hero::after{
@@ -138,7 +153,7 @@ input::placeholder{color:#93a4b8}
 .book-card h3{color:var(--navy);font-size:1.8rem;letter-spacing:-.04em;margin-bottom:12px}
 .checks{list-style:none;display:grid;gap:13px;margin-top:22px}
 .checks li{display:flex;gap:11px;align-items:flex-start;font-weight:700;color:#46566d}
-.checks li:before{content:"✓";display:grid;place-items:center;width:25px;height:25px;flex:0 0 25px;border-radius:50%;background:#dcfce7;color:var(--green);font-weight:900}
+.checks li:before{content:"âœ“";display:grid;place-items:center;width:25px;height:25px;flex:0 0 25px;border-radius:50%;background:#dcfce7;color:var(--green);font-weight:900}
 
 .commercial{background:linear-gradient(rgba(6,26,47,.88),rgba(6,26,47,.88)),url("../images/commercial-cleaning.jpg") center/cover;color:#fff}
 .commercial h2,.commercial .card h3{color:#fff}
@@ -177,6 +192,13 @@ footer p,footer a,footer span{color:#cad6e2}
 
 .whatsapp{position:fixed;right:18px;bottom:18px;z-index:200;background:#22c55e;color:#fff;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;font-size:1.4rem;box-shadow:0 18px 34px rgba(34,197,94,.36)}
 
+
+@media (prefers-reduced-motion: reduce){
+  .hero{
+    animation:none;
+  }
+}
+
 @media(max-width:980px){
   .nav-links{display:none}
   .hero{background-position:center right}
@@ -192,7 +214,7 @@ footer p,footer a,footer span{color:#cad6e2}
   .topbar-inner{justify-content:center;text-align:center}
   .brand img{width:58px;height:58px}
   .brand span{font-size:.98rem}
-  .hero{min-height:auto;background-position:68% center}
+  .hero{min-height:auto;background-position:center right, 68% center;background-size:cover, cover;animation:none}
   .hero-content{padding:85px 0}
   .hero h1{font-size:clamp(2.35rem,12vw,3.6rem)}
   .hero-copy{font-size:1.05rem}
