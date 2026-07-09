@@ -298,6 +298,7 @@ footer p,footer a,footer span{color:#cad6e2}
   .cta-box{
     padding:25px;
     border-radius:25px;
+  }
 }
 
 @keyframes heroFloatMobile{
@@ -317,3 +318,4 @@ footer p,footer a,footer span{color:#cad6e2}
     background-size:cover, 112%;
   }
 
+}
